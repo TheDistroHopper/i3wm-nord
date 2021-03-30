@@ -1,0 +1,235 @@
+! ------------------------------------------------------------------------------
+! xterm standard arcolinux theme
+! ------------------------------------------------------------------------------
+! https://critical.ch/xterm/
+! ------------------------------------------------------------------------------
+
+xterm*font: 7x13
+xterm*faceName: Monospace:size=12:antialias=false
+xterm*loginShell: true
+xterm*vt100*geometry: 90x34
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-color
+xterm*eightBitInput: false
+xterm*foreground: rgb:d9/d4/d4
+xterm*background: rgb:32/32/32
+xterm*color0: rgb:00/00/00
+xterm*color1: rgb:a8/00/00
+xterm*color2: rgb:00/a8/00
+xterm*color3: rgb:a8/54/00
+xterm*color4: rgb:5f/81/9d
+xterm*color5: rgb:a8/00/a8
+xterm*color6: rgb:00/a8/a8
+xterm*color7: rgb:70/78/80
+xterm*color8: rgb:54/54/54
+xterm*color9: rgb:fc/54/54
+xterm*color10: rgb:54/fc/54
+xterm*color11: rgb:fc/fc/54
+xterm*color12: rgb:81/a2/be
+xterm*color13: rgb:fc/54/fc
+xterm*color14: rgb:54/fc/fc
+xterm*color15: rgb:c5/c8/c6
+xterm*boldMode: false
+
+
+
+! ------------------------------------------------------------------------------
+! URxvt standard arcolinux theme - Reload with xrdb -merge ~/.Xresources
+! ------------------------------------------------------------------------------
+
+
+
+! general settings
+URxvt*saveline:         15000
+URxvt*termName:         xterm-256color
+URxvt*urgentOnBell:     false
+URxvt*visualBell:       false
+URxvt*iso14755:         false
+URxvt*iso14755_52:      false
+URxvt*meta8:            false
+URxvt*metaSendsEscape:  true
+URxvt*iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
+
+! appearance
+URxvt*depth:             32
+!URxvt*transparent:      true
+URxvt*shading:          30
+URxvt*background:       rgba:2222/2222/2222/AAAA
+!URxvt*background:       [80]#404552
+!URxvt*background:       [70]#3F424A
+!URxvt*background:        [80]#282A36
+URxvt*foreground:        #F8F8FF
+URxvt*underlineColor:    #4682B4
+URxvt*highlightColor:    #4682B4
+URxvt*throughColor:      Blue
+URxvt*cursorColor:       #c5c8c6
+URxvt*scrollBar:         false
+URxvt*scrollTtyOutput:   false
+URxvt*scrollWithBuffer:  true
+URxvt*scrollTtyKeypress: true
+URxvt*internalBorder:    0
+URxvt*externalBorder:    0
+URxvt*colorIT:      	 #87af5f
+URxvt*colorBD:      	 #c5c8c6
+URxvt*colorUL:      	 #87afd7
+
+
+! colors
+URxvt*color0: #3f3f3f
+URxvt*color1: #ac3c3c
+URxvt*color2: #60b48a
+URxvt*color3: #dfaf8f
+URxvt*color4: #506070
+URxvt*color5: #dc8cc3
+URxvt*color6: #8cd0d3
+URxvt*color7: #dcdccc
+URxvt*color8: #79A9FF
+URxvt*color9: #da6e6e
+URxvt*color10: #c3bf9f
+URxvt*color11: #f0dfaf
+URxvt*color12: #94bff3
+URxvt*color13: #ec93d3
+URxvt*color14: #93e0e3
+URxvt*color15: #ffffff
+
+! fonts
+URxvt*letterSpace: 	    		-2
+URxvt*font:                 	xft:Monospace:regular:size=12
+URxvt*imFont:               	xft:Monospace:regular:size=12
+URxvt*boldFont:             	xft:Monospace:bold:size=12
+URxvt*italicFont:           	xft:Monospace:italic:size=12
+URxvt*boldItalicFont:     		xft:Monospace:regular:size=12
+! run :.!fc-list | grep <font-name>
+
+! perl extensions
+URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
+!URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,tabbed
+
+! macros for clipboard and selection
+URxvt*copyCommand:      xclip -i -selection clipboard
+URxvt*pasteCommand:     xclip -o -selection clipboard
+URxvt*keysym.M-c:       perl:clipboard:copy
+URxvt*keysym.m-v:       perl:clipboard:paste
+URxvt*keysym.M-C-v:     perl:clipboard:paste_escaped
+URxvt*keysym.M-Escape:  perl:keyboard-select:activate
+URxvt*keysym.M-s:       perl:keyboard-select:search
+URxvt*keysym.M-u:       perl:url-select:select_next
+URxvt*resize-font.smaller:	C-Down
+URxvt*resize-font.bigger:	C-Up
+URxvt*urlLauncher:      firefox
+URxvt*underlineURLs:    true
+URxvt*urlButton:        1
+URxvt*geometry: 		90x30
+
+! tabbed
+URxvt*tabbed.tabbar-fg: 4
+URxvt*tabbed.tabbar-bg: 16
+URxvt*tabbed.tab-fg:    15
+URxvt*tabbed.tab-bg:    4
+URxvt*buffered:         false
+URxvt*keysym.Control-Shift-C: perl:clipboard:copy
+URxvt*keysym.Control-Shift-V: perl:clipboard:paste
+
+
+
+
+
+! ------------------------------------------------------------------------------
+! UXTerm standard arcolinux theme
+! ------------------------------------------------------------------------------
+
+
+
+! termtype
+UXTerm*termName: xterm-256color
+
+
+UXTerm*cursorColor:        white
+UXTerm*VT100.geometry:     90x30
+UXTerm*font:               Monospace
+UXTerm*faceSize:		   12
+UXTerm*dynamicColors:      true
+UXTerm*utf8:               2
+UXTerm*eightBitInput:      true
+UXTerm*saveLines:          10000
+UXTerm*scrollKey:          true
+UXTerm*scrollTtyOutput:    false
+UXTerm*scrollBar:          false
+UXTerm*rightScrollBar:     false
+UXTerm*jumpScroll:         true
+UXTerm*multiScroll:        true
+UXTerm*toolBar:            false
+
+! fix colors
+UXTerm*background: rgb:63/63/63
+UXTerm*foreground: rgb:00/00/00
+UXTerm*color0: rgb:00/00/00
+UXTerm*color1: rgb:a8/00/00
+UXTerm*color2: rgb:00/a8/00
+UXTerm*color3: rgb:a8/54/00
+UXTerm*color4: rgb:00/00/a8
+UXTerm*color5: rgb:a8/00/a8
+UXTerm*color6: rgb:00/a8/a8
+UXTerm*color7: rgb:a8/a8/a8
+UXTerm*color8: rgb:54/54/54
+UXTerm*color9: rgb:fc/54/54
+UXTerm*color10: rgb:54/fc/54
+UXTerm*color11: rgb:fc/fc/54
+UXTerm*color12: rgb:54/54/fc
+UXTerm*color13: rgb:fc/54/fc
+UXTerm*color14: rgb:54/fc/fc
+UXTerm*color15: rgb:fc/fc/fc
+UXTerm*boldMode: false
+UXTerm*colorBDMode: true
+UXTerm*colorBD: rgb:3f/3f/3f
+
+
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! ! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+!
+! ! Project:    Nord XResources
+! ! Version:    0.1.0
+! ! Repository: https://github.com/arcticicestudio/nord-xresources
+! ! License:    MIT
+!
+ #define nord0 #2E3440
+ #define nord1 #3B4252
+ #define nord2 #434C5E
+ #define nord3 #4C566A
+ #define nord4 #D8DEE9
+ #define nord5 #E5E9F0
+ #define nord6 #ECEFF4
+ #define nord7 #8FBCBB
+ #define nord8 #88C0D0
+ #define nord9 #81A1C1
+ #define nord10 #5E81AC
+ #define nord11 #BF616A
+ #define nord12 #D08770
+ #define nord13 #EBCB8B
+ #define nord14 #A3BE8C
+ #define nord15 #B48EAD
+
+ *.foreground:   nord4
+ *.background:   nord0
+ *.cursorColor:  nord4
+ *fading: 35
+ *fadeColor: nord3
+
+ *.color0: nord1
+ *.color1: nord11
+ *.color2: nord14
+ *.color3: nord13
+ *.color4: nord9
+ *.color5: nord15
+ *.color6: nord8
+ *.color7: nord5
+ *.color8: nord3
+ *.color9: nord11
+ *.color10: nord14
+ *.color11: nord13
+ *.color12: nord9
+ *.color13: nord15
+ *.color14: nord7
+ *.color15: nord6
+
