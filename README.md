@@ -2,9 +2,6 @@
 ## alacritty - vim - neofetch - htop
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/sc1.jpg?token=AOBGIISN6HJ45FBF5LXLY3LANQ4Z2)
 
-## i3status
-![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/i3status.jpg?token=AOBGIISOMDEGX75N4GSV4RLANQ5OG)
-
 ## thunar
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/thunar.jpg?token=AOBGIIVHX47W4L3ZHZPEKXDANQ5WK)
 
