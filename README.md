@@ -1,11 +1,6 @@
 # i3wm-nord
-## alacritty - vim - neofetch - htop
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/sc1.jpg?token=AOBGIISN6HJ45FBF5LXLY3LANQ4Z2)
-
-## thunar
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/thunar.jpg?token=AOBGIIVHX47W4L3ZHZPEKXDANQ5WK)
-
-## rofi
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/rofi.jpg?token=AOBGIIVCTWDY4MDVTVQCA7TANQ5UU)
 
 ### Configurations
