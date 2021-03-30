@@ -1,7 +1,7 @@
 # i3wm-nord
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/sc1.jpg?token=AOBGIISN6HJ45FBF5LXLY3LANQ4Z2)
-![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/thunar.jpg?token=AOBGIIVHX47W4L3ZHZPEKXDANQ5WK)
-![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/rofi.jpg?token=AOBGIIVCTWDY4MDVTVQCA7TANQ5UU)
+![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/rofi-thunar.jpg?token=AOBGIIXLZKMH42QPY5DFQHDANRICS)
+![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/lock.jpg?token=AOBGIITB3IRCFE6S3ZJYZ63ANRIEC)
 
 ### Configurations
 - [i3-gaps](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/i3) (Window Manager) + [i3status](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/i3status) (Status Bar)
@@ -16,4 +16,4 @@
 
 ### Wallpapers
 - [Homescreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/Pictures/walls/ign-0001.png)
-- [Lockscreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/Pictures/arco-login.jpg)
+- [Loginscreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/Pictures/arco-login.jpg)
