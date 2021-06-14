@@ -274,23 +274,12 @@ exec_always --no-startup-id autotiling
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 
-# network
-#exec --no-startup-id nm-applet
-
-#exec --no-startup-id volumeicon
-
 #feh sets wallpaper
 exec --no-startup-id feh --bg-fill /home/sarveshsp/Pictures/walls/*
 
 #Polybar
 #exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
-#####################################################################################################################
-#################                                 system applications                               #################
-#####################################################################################################################
-
-exec --no-startup-id xfce4-power-manager &
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 #####################################################################################################################
 #################                          applications keyboard shortcuts                          #################
@@ -313,11 +302,6 @@ bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 #####################################################################################################################
 
 bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-bindsym Control+Print exec --no-startup-id xfce4-screenshooter
-bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
-#bindsym shift+Print exec --no-startup-id shutter
-
-
 
 
 
@@ -459,7 +443,6 @@ mode "$mode_gaps_outer" {
 #if you want transparency on non-focused windows, ...
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
-#bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
 #####################################################################################################################
 #####################################################################################################################
@@ -487,18 +470,12 @@ set $base0F #fcc09e
 #its neon blue #4666FF
 
 bar {
-    height 25
+   	height 25
 	position top 
-    font pango:Source Code Pro Black 11
+    	font pango:Source Code Pro Black 11
 	status_command i3status
-    tray_padding 1
-    strip_workspace_numbers yes
-    
-    #workspace_buttons no  
-    #  please set your primary output 'xrandr --output eDP1 --primary'
-    #  tray_output primary
-    #  tray_output LVDS1 
-
+    	tray_padding 1
+    	strip_workspace_numbers yes
 	bindsym button4 nop
 	bindsym button5 nop
 
@@ -517,7 +494,6 @@ bar {
 }
 
     ##START THEMING WM
-    #Theme name : ArcoLinux Mastermind
 
     # Window color settings
     # class                 border  backgr. text    indicator
