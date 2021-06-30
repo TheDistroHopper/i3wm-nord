@@ -14,53 +14,68 @@ general {
         color_bad = "#ff7770" # Light red
 }
 
-#order += "ipv6"
-#order += "run_watch DHCP"
-#order += "run_watch VPN"
-#order += "wireless _first_"
-#order += "ethernet _first_"
+# order += "ipv6"
 order += "volume master"
 order += "wireless _first_"
+# order += "ethernet _first_"
+# order += "battery all"
 order += "battery 0"
+# order += "disk /"
+# order += "load"
+# order += "memory"
 order += "tztime local"
+
+# wireless _first_ {
+#         format_up = "(%quality at %essid)"
+#         format_down = "down"
+# }
 
 wireless _first_ {
         format_up = " %essid  "
         format_down = " Down  "
 }
 
-ethernet _first_ {
-        # if you use %speed, i3status requires root privileges
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
-}
-
 volume master {
-        format = " %volume  "
-        format_muted = "MUTE:%volume  "
+        format = " %volume  "
+        format_muted = " %volume  "
         device = "default"
         mixer = "Master"
         mixer_idx = 0
 }
 
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+# battery all {
+#         format = "%status %percentage"
+# }
+
 battery 0 {
-        format = "%status%percentage  " 
+        format = "%status %percentage"
         hide_seconds = true
         integer_battery_capacity = true
         last_full_capacity = true
         status_chr = " +"
-        status_bat = " "
+        status_bat = ""
         status_full = ""
 }
 
-run_watch DHCP {
-        pidfile = "/var/run/dhclient*.pid"
+disk "/" {
+        format = "%avail"
 }
 
-run_watch VPN {
-        pidfile = "/var/run/vpnc/pid"
+load {
+        format = "CPU: %1min"
+}
+
+memory {
+        format = "  Mem %used"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = " %H:%M    %d-%m-%Y  "
+        format = "   %Y-%m-%d    %H:%M  "
 }
