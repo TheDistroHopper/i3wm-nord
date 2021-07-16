@@ -7,7 +7,7 @@
 ### Configurations
 - [i3-gaps](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/i3) (Window Manager) + [i3status](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/i3status) (Status Bar)
 - [Alacritty](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/alacritty) (Terminal)
-- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) (Font)
+- [Source Code Pro](https://archlinux.org/packages/extra/any/adobe-source-code-pro-fonts/) (Font)
 - [Rofi](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/rofi) (Launcher)
 - [Nordic Darker](https://www.gnome-look.org/p/1267246/) (Theme)
 - [NordArc](https://github.com/robertovernina/NordArc) (Icons)
