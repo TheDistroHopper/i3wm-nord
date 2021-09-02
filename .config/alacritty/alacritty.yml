@@ -14,7 +14,7 @@ window:
 
 colors:
   primary:
-    background: '#2e3440'
+    background: '#1f222d'
     foreground: '#d8dee9'
     dim_foreground: '#a5abb6'
   cursor:
@@ -62,14 +62,14 @@ colors:
     white: '#aeb3bb'
 
 font:
-  normal:
-    family: Source Code Pro
-    style: Regular
-
-  bold:
-    family: Source Code Pro
-
-  italic:
-    family: Source Code Pro
+  #   normal:
+  #     family: Source Code Pro
+  #     style: Regular
+  # 
+  #   bold:
+  #     family: Source Code Pro
+  # 
+  #   italic:
+  #     family: Source Code Pro
 
   size: 8

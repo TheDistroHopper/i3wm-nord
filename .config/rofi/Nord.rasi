@@ -8,8 +8,8 @@
 //----------------------
 
 configuration {
-	modi: 			"drun,window,file-browser,calc";
-	width: 			900;
+	modi: 			"drun,window";
+	width: 			600;
     sidebar-mode:   true;
 	lines: 			10;
     show-icons:     false;

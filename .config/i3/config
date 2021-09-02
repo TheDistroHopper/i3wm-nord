@@ -44,6 +44,8 @@ set $right semicolon
 #################                          Single and Dual screen                                   #################
 #####################################################################################################################
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60.00 
+# exec xrandr --setprovideroutputsource modesetting NVIDIA-0
+exec xrandr --auto
 
 
 # switch to workspace
@@ -189,10 +191,10 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym Mod1+Ctrl+Right workspace next
 bindsym Mod1+Ctrl+Left workspace prev
 
-# switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
 
-
+#####################################################################################################################
+#################                          Scratchpad                                        #################
+#####################################################################################################################
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
@@ -220,7 +222,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 # qwerty/azerty issue for letter z
 bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
+bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 
@@ -279,36 +281,19 @@ font pango:Source Code Pro 13
 #################           autostart   -    execute applications at boot time                      #################
 #####################################################################################################################
 
-# USER APPLICATIONS TO START AT BOOT
-
-
-# Autotiling
-exec_always --no-startup-id autotiling
-
 
 #Authentication dialog
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-
-#feh sets wallpaper
-exec --no-startup-id feh --bg-fill /home/sarveshsp/Pictures/walls/*
-
-#Polybar
-#exec_always --no-startup-id ~/.config/polybar/launch.sh &
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 
 #####################################################################################################################
 #################                          applications keyboard shortcuts                          #################
 #####################################################################################################################
 
-# terminal
 bindsym $mod+Return exec --no-startup-id alacritty;focus
 
-#pavucontrol
-#arcolinux conflict
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 
-for_window [class="Thunar"] focus
 bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 
 
@@ -317,7 +302,8 @@ bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 #################                          screenshots                                              #################
 #####################################################################################################################
 
-bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+bindsym Print exec gnome-screenshot
+bindsym $mod+Print exec gnome-screenshot -i
 
 
 
@@ -325,14 +311,10 @@ bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e '
 #################                          audio settings                                           #################
 #####################################################################################################################
 
-
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
-bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 
 #####################################################################################################################
@@ -348,37 +330,10 @@ bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 #################                          bar toggle                                               #################
 #####################################################################################################################
 
-
 # bar toggle, hide or show
 bindsym $mod+b bar mode toggle
 
 bindsym $mod+i bar mode invisible
-
-
-#####################################################################################################################
-#################                          border control                                           #################
-#####################################################################################################################
-
-
-# Border control
-hide_edge_borders both
-bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
-
-#changing border style
-#super+t in arcolinux is starting terminal
-bindsym $mod+t border normal
-bindsym $mod+y border 1pixel
-bindsym $mod+u border none
-
-
-#new_window pixel 1
-new_window normal
-#new_window none
-
-#new_float pixel 1
-new_float normal
-#new_float none
-
 
 
 
@@ -458,6 +413,8 @@ mode "$mode_gaps_outer" {
 
 #if you want transparency on non-focused windows, ...
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
 
 
 #####################################################################################################################
