@@ -1,7 +1,7 @@
 
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/i3wm-nord/main/i3wm-nord.png)
-![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/sc1.jpg?token=AOBGIISN6HJ45FBF5LXLY3LANQ4Z2)
-![screenshot](https://raw.githubusercontent.com/sarveshspatil111/Dotfiles/main/Pictures/screenshots/rofi-thunar.jpg?token=AOBGIIXLZKMH42QPY5DFQHDANRICS)
+![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/Pictures/screenshots/sc1.jpg)
+![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/Pictures/screenshots/rofi-thunar.jpg)
 ![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/Pictures/screenshots/login.jpg?raw=true)
 
 ### Configurations
