@@ -8,8 +8,9 @@
 - [i3-gaps](https://github.com/sarveshspatil111/i3wm-nord/tree/main/i3) (Window Manager) + [i3status](https://github.com/sarveshspatil111/i3wm-nord/tree/main/i3status) (Status Bar)
 - [Alacritty](https://github.com/sarveshspatil111/i3wm-nord/tree/main/alacritty) (Terminal)
 - [OperatorMono Nerd Font](https://github.com/sarveshspatil111/i3wm-nord/tree/main/fonts) (Font)
-- [Nordic Darker](https://www.gnome-look.org/p/1267246/) (Theme)
-- [NordArc](https://github.com/robertovernina/NordArc) (Icons)
+- [NordArc Theme](https://github.com/sarveshspatil111/i3wm-nord/tree/main/themes) (Theme)
+- [NordArc Icons](https://github.com/sarveshspatil111/i3wm-nord/tree/main/icons) (Icons)
+- [Capitaine Cursors Light](https://github.com/sarveshspatil111/i3wm-nord/tree/main/icons) (Cursors)
 - [NordTheme](https://www.nordtheme.com/) (Colorscheme)
 
 ### Wallpapers
