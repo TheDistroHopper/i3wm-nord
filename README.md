@@ -14,5 +14,5 @@
 - [NordTheme](https://www.nordtheme.com/) (Colorscheme)
 
 ### Wallpapers
-- [Homescreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/wallpapers/moon-nord.png)
-- [Loginscreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/wallpapers/tower-nord.png)
+- [Homescreen](https://raw.githubusercontent.com/sarveshspatil111/i3wm-nord/main/wallpapers/moon-nord.png)
+- [Loginscreen](https://raw.githubusercontent.com/sarveshspatil111/i3wm-nord/main/wallpapers/tower-nord.png)
