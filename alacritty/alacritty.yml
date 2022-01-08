@@ -7,6 +7,8 @@
 # License:    MIT
 # References:
 #   https://github.com/alacritty/alacritty
+
+background_opacity: 0.9
 window:
   padding:
     x: 5
@@ -62,14 +64,14 @@ colors:
     white: '#aeb3bb'
 
 font:
-  #   normal:
-  #     family: Source Code Pro
-  #     style: Regular
-  # 
-  #   bold:
-  #     family: Source Code Pro
-  # 
-  #   italic:
-  #     family: Source Code Pro
+  normal:
+    family: Operator Mono Book
+    style: Regular
+
+  bold:
+    family: Operator Mono Medium
+
+  italic:
+    family: Operator Mono
 
   size: 8

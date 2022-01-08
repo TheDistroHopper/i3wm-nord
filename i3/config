@@ -25,15 +25,15 @@ set $down k
 set $left j
 set $right semicolon
 
+font pango:OperatorMono Nerd Font 0
+
 
 
 #####################################################################################################################
 #################                          Single and Dual screen                                   #################
 #####################################################################################################################
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60.00 
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60.00
 # exec xrandr --setprovideroutputsource modesetting NVIDIA-0
-exec xrandr --auto
-
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -61,14 +61,11 @@ bindsym $mod+Shift+9 move container to workspace 9
 
 
 #####################################################################################################################
-#################                          3 menu's in arcolinux                                     #################
+#################                                   menu                                            #################
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#2E3440' -nf '#81a1c1' -sb '#81a1c1' -sf '#2E3440' -fn 'SourceCodePro:bold:pixelsize=16'
-
-# start rofi full
-bindsym $mod+d exec --no-startup-id rofi -show drun -font "Source Code Pro 14"
+bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#1f222d' -nf '#81a1c1' -sb '#81a1c1' -sf '#1f222d' -fn 'OperatorMonoBook:bold:pixelsize=18'
 
 
 
@@ -76,15 +73,12 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -font "Source Code Pro 14"
 #################                          how to exit, logoff, suspend, ...                        #################
 #####################################################################################################################
 
-#Backup exit
-#Press ctrl+alt+x - check toolbar for next choices
 bindsym $mod+0 mode "$mode_system"
 
 set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
-     
+
     bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
-#    bindsym k exec i3lock -i Pictures/walls/ign-0001.png
     bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
     bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
     bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
@@ -120,7 +114,6 @@ bindsym $mod+Shift+c reload
 #####################################################################################################################
 
 # kill focused window
-#bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 
@@ -166,8 +159,6 @@ bindsym $mod+Shift+Right move right
 #####################################################################################################################
 #################                          moving around workspaces                                 #################
 #####################################################################################################################
-
-
 # next/previous workspace
 
 bindsym Mod1+Tab workspace next
@@ -202,7 +193,7 @@ bindsym $mod+h split h
 # split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+# Enter fullscreen mode for the focused container
 # Super + F in arcolinux is execute thunar
 bindsym $mod+f fullscreen toggle
 
@@ -251,25 +242,11 @@ mode "resize" {
 
 
 #####################################################################################################################
-#################                          choose the font                                          #################
-#####################################################################################################################
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# choose your font
-#font pango:Noto Mono Regular 13
-font pango:Source Code Pro 13
-
-
-
-
-
-#####################################################################################################################
 #################           autostart   -    execute applications at boot time                      #################
 #####################################################################################################################
 
 
-#Authentication dialog
+#Authentication dialog (polkit-gnome)
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 
@@ -324,23 +301,14 @@ bindsym $mod+i bar mode invisible
 
 
 
-#####################################################################################################################
-#################                          Popups  control                                          #################
-#####################################################################################################################
-
-#Popups during fullscreen mode
-popup_during_fullscreen smart
-
-
-
 
 #####################################################################################################################
 #################                          i3 gaps next                                             #################
 #####################################################################################################################
 
 for_window [class="^.*"] border pixel 1
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 1
 #smart_gaps on
 #smart_borders on
 
@@ -392,10 +360,8 @@ mode "$mode_gaps_outer" {
 }
 
 
-
-
 #####################################################################################################################
-#################                          picom of i3wm                                          #################
+#################                          picom and wallpaper                                      #################
 #####################################################################################################################
 
 #if you want transparency on non-focused windows, ...
@@ -411,45 +377,26 @@ exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
 #####################################################################################################################
 #####################################################################################################################
 #####################################################################################################################
-set $base00 #101218
-set $base01 #1f222d
-set $base02 #252936
-set $base03 #5e81ac  
-set $base04 #C0C5CE
-set $base05 #d1d4e0
-set $base06 #C9CCDB
-set $base07 #ffffff
-set $base08 #ee829f
-set $base09 #f99170
-set $base0A #ffefcc
-set $base0B #a5ffe1
-set $base0C #97e0ff
-set $base0D #97bbf7
-set $base0E #c0b7f9
-set $base0F #fcc09e
-#its neon blue #4666FF
 
 bar {
    	height 25
-	position top 
-    	font pango:Source Code Pro Black 11
+	position top
+    font pango:OperatorMono Nerd Font 12
 	status_command i3status
-    	tray_padding 1
-    	strip_workspace_numbers yes
-	bindsym button4 nop
-	bindsym button5 nop
+    tray_padding 1
+    strip_workspace_numbers yes
 
     colors {
-            separator  $base01
-            background $base01
+            separator  #1f222d
+            background #1f222d
             statusline #81a1c1
-              
+
             #                   border  background text
-            focused_workspace  $base01 $base01    #81a1c1 
-            active_workspace   $base01 $base02    $base03
-            inactive_workspace $base01 $base01    #4c566a
-            urgent_workspace   $base01 $base01    $base08
-            binding_mode       $base01 #81a1c1    #2e3440
+            focused_workspace  #1f222d #1f222d    #81a1c1
+            active_workspace   #1f222d #252936    #5e81ac
+            inactive_workspace #1f222d #1f222d    #4c566a
+            urgent_workspace   #1f222d #1f222d    #ee829f
+            binding_mode       #1f222d #81a1c1    #2e3440
     }
 }
 
@@ -458,14 +405,16 @@ bar {
     # Window color settings
     # class                 border  backgr. text    indicator
     client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
-    client.unfocused        #2e3440 #2e3440 #888888 #2e3440
-    client.focused_inactive #2e3440 #2e3440 #888888 #2e3440
-    client.placeholder      #2e3440 #2e3440 #888888 #2e3440
+    client.unfocused        #2e3440 #1f222d #888888 #1f222d
+    client.focused_inactive #2e3440 #1f222d #888888 #1f222d
+    client.placeholder      #2e3440 #1f222d #888888 #1f222d
     client.urgent           #900000 #900000 #ffffff #900000
 
     client.background       #242424
 
     ##STOP THEMING WM
+
+exec xset r rate 300 50 &
 
 #####################################################################################################################
 #####################################################################################################################

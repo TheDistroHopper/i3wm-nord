@@ -1,20 +1,17 @@
 
 ![screenshot](https://raw.githubusercontent.com/sarveshspatil111/i3wm-nord/main/i3wm-nord.png)
-![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/Pictures/screenshots/sc1.jpg)
-![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/Pictures/screenshots/rofi-thunar.jpg)
-![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/Pictures/screenshots/login.jpg?raw=true)
+![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/screenshots/SC1.png)
+![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/screenshots/SC2.png)
+![screenshot](https://github.com/sarveshspatil111/i3wm-nord/blob/main/screenshots/SC3.jpg)
 
 ### Configurations
-- [i3-gaps](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/i3) (Window Manager) + [i3status](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/i3status) (Status Bar)
-- [Alacritty](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/alacritty) (Terminal)
-- [Source Code Pro](https://archlinux.org/packages/extra/any/adobe-source-code-pro-fonts/) (Font)
-- [Rofi](https://github.com/sarveshspatil111/Dotfiles/tree/main/.config/rofi) (Launcher)
+- [i3-gaps](https://github.com/sarveshspatil111/Dotfiles/tree/main/i3) (Window Manager) + [i3status](https://github.com/sarveshspatil111/Dotfiles/tree/main/i3status) (Status Bar)
+- [Alacritty](https://github.com/sarveshspatil111/Dotfiles/tree/main/alacritty) (Terminal)
+- [OperatorMono Nerd Font](https://archlinux.org/packages/extra/any/adobe-source-code-pro-fonts/) (Font)
 - [Nordic Darker](https://www.gnome-look.org/p/1267246/) (Theme)
 - [NordArc](https://github.com/robertovernina/NordArc) (Icons)
-- [ZSH](https://github.com/sarveshspatil111/Dotfiles/blob/main/.zshrc) (Shell)
-- [Vim](https://github.com/sarveshspatil111/Dotfiles/blob/main/.vimrc) (Editor)
 - [NordTheme](https://www.nordtheme.com/) (Colorscheme)
 
 ### Wallpapers
-- [Homescreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/Pictures/walls/ign-0001.png)
-- [Loginscreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/Pictures/arco-login.jpg)
+- [Homescreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/wallpapers/moon-nord.png)
+- [Loginscreen](https://github.com/sarveshspatil111/Dotfiles/blob/main/wallpapers/tower-nord.png)
