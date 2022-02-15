@@ -16,3 +16,19 @@
 ### Wallpapers
 - [Homescreen](https://raw.githubusercontent.com/sarveshspatil111/i3wm-nord/main/wallpapers/moon-nord.png)
 - [Loginscreen](https://raw.githubusercontent.com/sarveshspatil111/i3wm-nord/main/wallpapers/tower-nord.png)
+
+### Dependencies
+- `i3-gaps`
+- `i3status`
+- `i3lock`
+- `dmenu`
+- `alacritty`
+- `picom`
+- `maim`
+- `light`
+- `imwheel`
+- `nitrogen`
+- `polkit-gnome`
+- `xclip`
+- `lxappearance`
+- `nemo`
