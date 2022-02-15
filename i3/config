@@ -32,7 +32,7 @@ font pango:OperatorMono Nerd Font 0
 #####################################################################################################################
 #################                          Single and Dual screen                                   #################
 #####################################################################################################################
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60.00
+# exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60.00
 # exec xrandr --setprovideroutputsource modesetting NVIDIA-0
 
 # switch to workspace
@@ -247,7 +247,7 @@ mode "resize" {
 
 
 #Authentication dialog (polkit-gnome)
-# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 
 #####################################################################################################################
@@ -258,7 +258,7 @@ bindsym $mod+Return exec --no-startup-id alacritty;focus
 
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 
-bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
+bindsym $mod+Shift+Return exec --no-startup-id nemo;focus
 
 
 
@@ -266,8 +266,8 @@ bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 #################                          screenshots                                              #################
 #####################################################################################################################
 
-bindsym Print exec gnome-screenshot
-bindsym $mod+Print exec gnome-screenshot -i
+bindsym Print exec maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
+bindsym $mod+Print exec maim --select | tee ~/Pictures/$(date +%s).png | xclip -sel c -t image/png
 
 
 
