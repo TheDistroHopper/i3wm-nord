@@ -33,19 +33,12 @@
 - `lxappearance`
 - `nemo`
 
-### Installation
-
-```sh
-cd ~
-git clone https://github.com/sarveshspatil111/i3wm-nord.git
-cd i3wm-nord
-./install.sh
-```
-
 #### Set user ID on execution for `light`
 ```sh
 sudo chmod +s $(which light)
 ```
+
+#### Set Wallpaper using `nitrogen`
 
 #### Change Theme, Icons and Mouse Cursor from `lxappearance`
 - *Widget Theme* : `NordArc-Theme`
