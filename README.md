@@ -32,3 +32,68 @@
 - `xclip`
 - `lxappearance`
 - `nemo`
+
+### Installation
+
+```sh
+cd ~
+git clone https://github.com/sarveshspatil111/i3wm-nord.git
+cd i3wm-nord
+./install.sh
+```
+
+#### Set user ID on execution for `light`
+```sh
+sudo chmod +s $(which light)
+```
+
+#### Change Theme, Icons and Mouse Cursor from `lxappearance`
+- *Widget Theme* : `NordArc-Theme`
+- *Icon Theme* : `NordArc`
+- *Mouse Cursor* : `Capitaine Cursors - White`
+
+### Keybindings
+- Super or Windows Key : `mod`
+- Open Terminal : `mod + Return`
+- Open File Manager : `mod + Shift + Return`
+- Switch Workspace : `mod + 1`, `mod + 2` upto `mod + 9`
+- Move Window to Specific Workspace : `mod + Shift + {Workspace Number}`
+- Application Menu : `mod + d`
+- Power Menu : `mod + 0`
+- Restart i3 : `mod + Shift + r`
+- Close Application : `mod + q`
+- Toggle Tiling / Floating : `mod + Shift + space`
+- Focus Up : `mod + up`
+- Focus Right : `mod + right`
+- Focus Down : `mod + down`
+- Focus Left : `mod + left`
+- Move Focused Window to Up : `mod + Shift + up`
+- Move Focused Window to Right : `mod + Shift + right`
+- Move Focused Window to Down : `mod + Shift + down`
+- Move Focused Window to Left : `mod + Shift + left`
+- Next Workspace : `Alt + Tab`
+- Previous Workspace : `Alt + Shift + Tab`
+- Back and Forth between Workspaces : `mod + Tab`
+- Move Window to Scratchpad : `mod + Shift + minus`
+- Show First Window from Scratchpad : `mod + minus`
+- Split in Horizontal Orientation : `mod + h`
+- Split in Vertical Orientation : `mod + v`
+- Toggle Fullscreen : `mod + f`
+- Stacked Layout : `mod + s`
+- Tabbed Layout : `mod + w`
+- Split Layout : `mod + e`
+- Change Focus between Tiling / Floating Windows : `mod + space`
+
+- Window Resize
+  - Enter to Window Resize Mode : `mod + r`
+  - Exit from Window Resize Mode : `Escape` or `Return` (Enter Key)
+  - Action Keys : `left`, `right`, `up`, `down`
+
+- Window Gaps
+  - Enter to Window Gaps Mode : `mod + Shift + g`
+  - Action Keys : `+`, `-`
+
+- Selected Area Screenshot to Clipboard : `Print`
+- Save Selected Area Screenshot : `mod + Print`
+- Toggle Status Bar : `mod + b`
+- Status Bar Invisible Mode : `mod + i`
